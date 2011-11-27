@@ -1,0 +1,26 @@
+<gallery>
+  <image>
+    <path>http://gopi.coolpage.biz/demo/wp-content/plugins/drop-in-image-slideshow-gallery/gallery/1.jpg</path>
+    <title>Image 1</title>
+    <link>http://gopi.coolpage.biz/demo/2009/10/12/excellent-transition-gallery-with-title-link-target/</link>
+	<target>_new</target>
+  </image>
+  <image>
+    <path>http://gopi.coolpage.biz/demo/wp-content/plugins/drop-in-image-slideshow-gallery/gallery/2.jpg</path>
+    <title>Image 2</title>
+    <link>http://gopi.coolpage.biz/demo/2009/10/12/excellent-transition-gallery-with-title-link-target/</link>
+	<target>_new</target>
+  </image>
+  <image>
+    <path>http://gopi.coolpage.biz/demo/wp-content/plugins/drop-in-image-slideshow-gallery/gallery/3.jpg</path>
+    <title>Image 3</title>
+    <link>http://gopi.coolpage.biz/demo/2009/10/12/excellent-transition-gallery-with-title-link-target/</link>
+	<target>_new</target>
+  </image>
+   <image>
+    <path>http://gopi.coolpage.biz/demo/wp-content/plugins/drop-in-image-slideshow-gallery/gallery/gSlide11.jpg</path>
+    <title>Image 4</title>
+    <link>http://gopi.coolpage.biz/demo/2009/10/12/excellent-transition-gallery-with-title-link-target/</link>
+	<target>_new</target>
+  </image>
+</gallery>
