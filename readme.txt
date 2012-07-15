@@ -1,0 +1,126 @@
+=== Excellent transition gallery ===
+Contributors: www.gopipulse.com, gopiplus 
+Donate link: http://www.gopipulse.com/work/2010/07/18/excellent-transition-gallery/
+Author URI: http://www.gopipulse.com/work/2010/07/18/excellent-transition-gallery/
+Plugin URI: http://www.gopipulse.com/work/2010/07/18/excellent-transition-gallery/
+Tags: image, slide show, slideshow, gallery, images, widget, translucent, translucent image, imagegallery, sidebar, Transitional
+Requires at least: 3.0
+Tested up to: 3.4.1
+Stable tag: 6.0
+	
+Don't just display images, showcase them in style using this Excellent transition gallery plugin. Random Transitional effects on IE browsers. 
+
+== Description ==
+
+Check official website for live demo [http://www.gopipulse.com/work/2010/07/18/excellent-transition-gallery/](http://www.gopipulse.com/work/2010/07/18/excellent-transition-gallery/)
+
+* Live Demo : [Live Demo](http://www.gopipulse.com/work/2010/07/18/excellent-transition-gallery/)	
+* More Information : [More Information](http://www.gopipulse.com/work/2010/07/18/excellent-transition-gallery/)				
+* User Comments : [User Comments](http://www.gopipulse.com/work/2010/07/18/excellent-transition-gallery/)		
+
+Don't just display images in the WordPress website, showcase them in style using this excellent transition gallery plugin.This is an image slideshow gallery that brings each image into view using 1 of 15 randomly chosen transitional effects in IE browsers. For other browsers that don't support these built in effects, a custom fade transition is used instead. this is a XML based image slideshow. in default it read image path from the XML file, after activated the plugin go to below mentioned path to update the images. This is enhanced version of super transition slideshow wordpress plugin.
+
+**Features of this plugin**
+
+1. Simple image gallery (galleries).
+2. Easy installation.
+3. Lovable transition effect on IE browser; simple fade transition on other browser.
+4. This is an XML based slideshow gallery.
+5. Optionally hyperlink each images.
+6. Optionally description for each image.
+7. Optionally target hyperlink option for each image.
+
+We can configure this plug-in in three different way.				
+
+1. Go to widget menu and drag and drop the "Excellent transition gallery" widget to your sidebar location.	
+
+2. Copy and past the mentioned code to your desired template location.		
+
+<code><?php if (function_exists (etgwtlt_show)) etgwtlt_show(); ?></code> 		
+
+3. Use below code in post or page.		
+
+<code>[excellent-transition-gallery=sample.xml]</code> 		
+In above code "sample.xml" is your gallery XML file, the XML file should be available in the gallery folder.		
+
+http://www.gopipulse.com/work/2010/07/18/excellent-transition-gallery/	
+
+== Installation ==
+
+**Installation Instruction and Configuration**  
+
+[Installation Instruction and Configuration](http://www.gopipulse.com/work/2010/07/18/excellent-transition-gallery/)	   
+
+== Frequently Asked Questions ==
+
+**How to arrange the width & height of the slideshow?**  
+**How to change the slide delay time**  
+**Where to upload my image?**  
+**how the slide show manages the order?**  
+**Do you want to change the gallery font style?**  
+
+[Answer page](http://www.gopipulse.com/work/2010/07/18/excellent-transition-gallery/)	
+[Contact](http://www.gopipulse.com/work/2010/07/18/excellent-transition-gallery/)	
+
+== Screenshots ==
+
+1. Admin setting page. http://www.gopipulse.com/work/2010/07/18/excellent-transition-gallery/
+
+2. Front end live demo for transition effect. http://www.gopipulse.com/work/2010/07/18/excellent-transition-gallery/
+
+
+== Upgrade Notice ==
+
+= 6.0 =
+
+New demo link, www.gopipulse.com
+
+= 5.0 =
+
+Tested upto 3.4
+
+= 4.0 =	
+
+Tested upto 3.3
+Please take your xml file for backup before update 4.0
+
+= 3.0 =	
+	
+Tested upto 3.1.3
+Please take your xml file for backup.
+
+= 2.0 =		
+
+Tested upto 3.0.1
+
+= 1.0 =		
+
+First version
+
+== Changelog ==
+
+= 6.0 =
+
+New demo link, www.gopipulse.com
+
+= 5.0 =
+
+Tested upto 3.4
+
+= 4.0 =	
+
+Tested upto 3.3
+Please take your xml file for backup before update 4.0
+
+= 3.0 =	
+	
+Tested upto 3.1.3
+Please take your xml file for backup.
+
+= 2.0 =		
+
+Tested upto 3.0.1
+
+= 1.0 =		
+
+First version

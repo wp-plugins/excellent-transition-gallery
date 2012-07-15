@@ -1,0 +1,30 @@
+.etgwtlt_widget_xml
+{ 
+	padding: 5px;
+	/*padding-top:5px;
+	padding-left:0px;
+	padding-right:0px;
+	padding-bottom:0px;*/
+	width: 200px; 
+	/*a width should be defined for transition to work
+	border: 2px solid #CCCCCC;*/
+	/*padding: 5px*/
+}
+
+.etgwtlt_widget_xml img
+{
+	border-width: 0;
+}
+
+.etgwtlt_sample_xml
+{ 
+	/*padding: 5px;
+	width: 200px; */
+	/*border: 2px solid #CCCCCC; */
+}
+.etgwtlt_sample200x150_xml
+{ 
+	/*padding: 5px;
+	width: 200px; */
+	/*border: 2px solid #CCCCCC; */
+}
