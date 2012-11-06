@@ -5,7 +5,7 @@ Plugin Name: Excellent transition gallery
 Plugin URI: http://www.gopiplus.com/work/2010/07/18/excellent-transition-gallery/
 Description: Don't just display images, showcase them in style using this Excellent transition gallery plugin. Randomly chosen Transitional effects in IE browsers. For other browsers that don't support these built in effects, a custom fade transition is used instead.  
 Author: Gopi.R
-Version: 6.0
+Version: 7.0
 Author URI: http://www.gopiplus.com/work/2010/07/18/excellent-transition-gallery/
 Donate link: http://www.gopiplus.com/work/2010/07/18/excellent-transition-gallery/
 License: GPLv2 or later
@@ -54,23 +54,25 @@ function etgwtlt_show()
     <?php
 }
 
+add_shortcode( 'excellent-transition-gallery', 'etgwtlt_shortcode' );
 
-add_filter('the_content','etgwtlt_show_filter');
-
-function etgwtlt_show_filter($content){
-	return 	preg_replace_callback('/\[excellent-transition-gallery=(.*?)\]/sim','etgwtlt_show_filter_Callback',$content);
-}
-
-function etgwtlt_show_filter_Callback($matches) 
+function etgwtlt_shortcode( $atts ) 
 {
 	$etgwtlt_xml = "";
 	$etgwtlt_package = "";
+	
+	//[excellent-transition-gallery filename="sample.xml"]
+	if ( ! is_array( $atts ) )
+	{
+		return '';
+	}
+	$filename = $atts['filename'];
 	
 	$etgwtlt_pluginurl = get_option('etgwtlt_pluginurl');
 	$etgwtlt_xmllocation = get_option('etgwtlt_xmllocation');
 	
 	$doc = new DOMDocument();
-	$doc->load( $etgwtlt_xmllocation . $matches[1] );
+	$doc->load( $etgwtlt_xmllocation . $filename );
 	$images = $doc->getElementsByTagName( "image" );
 	
 	foreach( $images as $image )
@@ -91,12 +93,9 @@ function etgwtlt_show_filter_Callback($matches)
 	$newwrapperid = str_replace(".","_",$matches[1]);
 	
 	$etgwtlt_xml = $etgwtlt_xml .'<link rel="stylesheet" href="'.$etgwtlt_pluginurl.'style.css" type="text/css" />';
-    //$etgwtlt_xml = $etgwtlt_xml .'<script type="text/javascript" src="'.$etgwtlt_pluginurl.'javascript.js"><script>';
     $etgwtlt_xml = $etgwtlt_xml .'<script type="text/javascript">';
 	$etgwtlt_xml = $etgwtlt_xml .'var flashyshow=new excellent_transition_gallery_with_title_link_target({ wrapperid: "'.$newwrapperid.'", wrapperclass: "etgwtlt_'.$newwrapperid.'", imagearray: ['.$etgwtlt_package.'],pause: '. get_option('etgwtlt_pause').',transduration: '. get_option('etgwtlt_transduration').' })';
 	$etgwtlt_xml = $etgwtlt_xml .'</script>';
-    
-    //$etgwtlt_xml = '---------'. $matches[1];
     
 	return $etgwtlt_xml;
 }
@@ -167,30 +166,13 @@ function etgwtlt_admin_option()
 	</td>
 	<td width="31%" align="center" valign="middle"></td></tr></table>
 	</form>
-    <br /><strong>1.Drag and drop the widget</strong><br />
-    Go to widget menu and drag and drop the "Excellent transition gallery" widget to your sidebar location. <br />
-    <br /><strong>2.Paste the below code to your desired template location</strong>
-    Copy and past the below mentioned code to your desired template location.
-    <div style="padding-top:7px;padding-bottom:7px;">
-    <code style="padding:7px;">
-    &lt;?php if (function_exists (etgwtlt_show)) etgwtlt_show(); ?&gt;
-    </code></div>
-    <br /><strong>3.Use below code in post or page</strong><br />
-    Use below code in post or page.
-    <div style="padding-top:7px;padding-bottom:7px;">
-    <input name="" style="width:400px;height:25px;" value="[excellent-transition-gallery=sample.xml]" type="text" />
-    </div>
-    In above short code "sample.xml" is your gallery XML file, the XML file should be available in the gallery folder<br />
-    <br />Check official website for live demo and more information <a target="_blank" href='http://www.gopiplus.com/work/2010/07/18/excellent-transition-gallery/'>click here</a><br> 
-    <br /><strong>Help</strong><br />
-    <p style="color:#990000;">
-	1. This plug-in will not create any thumbnail of the image.<br>
-	2. To change or use the fixed width take "javascript.js" file from plug-in directory and go to line 63 and fix the width, see below.<br>
-	<br>
-	<code>slideHTML+='&lt;img src=&quot;'+this.imagearray[index][0]+'&quot; /&gt;'<br>
-	to<br>
-	slideHTML+='&lt;img width=&quot;200&quot; HEIGHT=&quot;150&quot; src=&quot;'+this.imagearray[index][0]+'&quot; /&gt;'</code>
-	<br></p>
+	<br /><strong>Plugin configuration</strong>
+	<ol>
+		<li>Drag and drop the widget</li>
+		<li>Short code for pages and posts</li>
+		<li>Add directly in the theme (Copy and past the below mentioned code to your desired template location)</li>
+	</ol>
+	Check official website for live demo and more information <a target="_blank" href='http://www.gopiplus.com/work/2010/07/18/excellent-transition-gallery/'>click here</a><br />
 	<?php
 	echo "</div>";
 }
@@ -239,7 +221,6 @@ function etgwtlt_add_javascript_files()
 }
 
 add_action('init', 'etgwtlt_add_javascript_files');
-
 add_action("plugins_loaded", "etgwtlt_widget_init");
 register_activation_hook(__FILE__, 'etgwtlt_install');
 register_deactivation_hook(__FILE__, 'etgwtlt_deactivation');
