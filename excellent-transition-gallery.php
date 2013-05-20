@@ -5,7 +5,7 @@ Plugin Name: Excellent transition gallery
 Plugin URI: http://www.gopiplus.com/work/2010/07/18/excellent-transition-gallery/
 Description: Don't just display images, showcase them in style using this Excellent transition gallery plugin. Randomly chosen Transitional effects in IE browsers. For other browsers that don't support these built in effects, a custom fade transition is used instead.  
 Author: Gopi.R
-Version: 7.1
+Version: 8.0
 Author URI: http://www.gopiplus.com/work/2010/07/18/excellent-transition-gallery/
 Donate link: http://www.gopiplus.com/work/2010/07/18/excellent-transition-gallery/
 License: GPLv2 or later
@@ -172,7 +172,7 @@ function etgwtlt_admin_option()
 		<li>Short code for pages and posts</li>
 		<li>Add directly in the theme (Copy and past the below mentioned code to your desired template location)</li>
 	</ol>
-	Check official website for live demo and more information <a target="_blank" href='http://www.gopiplus.com/work/2010/07/18/excellent-transition-gallery/'>click here</a><br />
+	Check official website for live demo and more information <a target="_blank" href="http://www.gopiplus.com/work/2010/07/18/excellent-transition-gallery/">click here</a><br />
 	<?php
 	echo "</div>";
 }
@@ -199,7 +199,7 @@ function etgwtlt_widget_init()
 
 function etgwtlt_deactivation() 
 {
-
+	// No action required.
 }
 
 function etgwtlt_add_to_menu() 

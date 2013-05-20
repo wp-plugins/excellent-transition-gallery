@@ -4,9 +4,9 @@ Donate link: http://www.gopiplus.com/work/2010/07/18/excellent-transition-galler
 Author URI: http://www.gopiplus.com/work/2010/07/18/excellent-transition-gallery/
 Plugin URI: http://www.gopiplus.com/work/2010/07/18/excellent-transition-gallery/
 Tags: image, slide show, slideshow, gallery, images, widget, translucent, translucent image, imagegallery, sidebar, Transitional
-Requires at least: 3.0
-Tested up to: 3.5
-Stable tag: 7.1
+Requires at least: 3.4
+Tested up to: 3.6
+Stable tag: 8.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 	
@@ -40,12 +40,7 @@ We can configure this plug-in in three different way.
 
 <code><?php if (function_exists (etgwtlt_show)) etgwtlt_show(); ?></code> 		
 
-3. Use below code in post or page.		
-
-<code>[excellent-transition-gallery=sample.xml]</code> 		
-In above code "sample.xml" is your gallery XML file, the XML file should be available in the gallery folder.		
-
-<code>[excellent-transition-gallery filename="sample.xml"]</code>
+3. Use the given short code in post or page.		
 
 http://www.gopiplus.com/work/2010/07/18/excellent-transition-gallery/	
 
@@ -74,6 +69,10 @@ http://www.gopiplus.com/work/2010/07/18/excellent-transition-gallery/
 
 
 == Upgrade Notice ==
+
+= 8.0 =
+
+Tested up to 3.6
 
 = 7.1 =
 
@@ -113,6 +112,10 @@ Tested upto 3.0.1
 First version
 
 == Changelog ==
+
+= 8.0 =
+
+Tested up to 3.6
 
 = 7.1 =
 
