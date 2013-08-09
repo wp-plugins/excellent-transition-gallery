@@ -6,7 +6,7 @@ Plugin URI: http://www.gopiplus.com/work/2010/07/18/excellent-transition-gallery
 Tags: image, slide show, slideshow, gallery, images, widget, translucent, translucent image, imagegallery, sidebar, Transitional
 Requires at least: 3.4
 Tested up to: 3.6
-Stable tag: 8.0
+Stable tag: 8.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 	
@@ -70,6 +70,11 @@ http://www.gopiplus.com/work/2010/07/18/excellent-transition-gallery/
 
 == Upgrade Notice ==
 
+= 8.1 =	
+
+Minor change in the admin layout.
+Please backup you image XML file before update.
+
 = 8.0 =
 
 Tested up to 3.6
@@ -112,6 +117,11 @@ Tested upto 3.0.1
 First version
 
 == Changelog ==
+
+= 8.1 =	
+
+Minor change in the admin layout.
+Please backup you image XML file before update.
 
 = 8.0 =
 

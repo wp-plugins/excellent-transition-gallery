@@ -5,7 +5,7 @@ Plugin Name: Excellent transition gallery
 Plugin URI: http://www.gopiplus.com/work/2010/07/18/excellent-transition-gallery/
 Description: Don't just display images, showcase them in style using this Excellent transition gallery plugin. Randomly chosen Transitional effects in IE browsers. For other browsers that don't support these built in effects, a custom fade transition is used instead.  
 Author: Gopi.R
-Version: 8.0
+Version: 8.1
 Author URI: http://www.gopiplus.com/work/2010/07/18/excellent-transition-gallery/
 Donate link: http://www.gopiplus.com/work/2010/07/18/excellent-transition-gallery/
 License: GPLv2 or later
@@ -122,65 +122,89 @@ function etgwtlt_widget($args)
 
 function etgwtlt_admin_option() 
 {
-	echo "<div class='wrap'>";
-	echo "<h2>Excellent transition gallery</h2>"; 
-    
-	$etgwtlt_title = get_option('etgwtlt_title');
-	$etgwtlt_pluginurl = get_option('etgwtlt_pluginurl');
-	$etgwtlt_xmllocation = get_option('etgwtlt_xmllocation');
-	$etgwtlt_pause = get_option('etgwtlt_pause');
-	$etgwtlt_transduration = get_option('etgwtlt_transduration');
-	
-	
-	if (@$_POST['etgwtlt_submit']) 
-	{
-		$etgwtlt_title = stripslashes($_POST['etgwtlt_title']);
-		$etgwtlt_pluginurl = stripslashes($_POST['etgwtlt_pluginurl']);
-		$etgwtlt_xmllocation = stripslashes($_POST['etgwtlt_xmllocation']);
-		$etgwtlt_title_yes = stripslashes($_POST['etgwtlt_title_yes']);
-		$etgwtlt_transduration = stripslashes($_POST['etgwtlt_transduration']);
-		
-		
-		update_option('etgwtlt_title', $etgwtlt_title );
-		update_option('etgwtlt_pluginurl', $etgwtlt_pluginurl );
-		update_option('etgwtlt_xmllocation', $etgwtlt_xmllocation );
-		update_option('etgwtlt_pause', $etgwtlt_pause );
-		update_option('etgwtlt_transduration', $etgwtlt_transduration );
-	}
-	?><form name="form_etgwtlt" method="post" action="">
-	<table width="100%" border="0" cellspacing="0" cellpadding="3"><tr><td width="69%" align="left">
-	<?php
-	echo '<p>Title:<br><input  style="width: 300px;" maxlength="200" type="text" value="';
-	echo $etgwtlt_title . '" name="etgwtlt_title" id="etgwtlt_title" /></p>';
-	echo '<p>Pause:<br><input  style="width: 100px;" maxlength="4" type="text" value="';
-	echo $etgwtlt_pause . '" name="etgwtlt_pause" id="etgwtlt_pause" /> Only Number / Pause between content change (millisec)</p>';
-	echo '<p>Transduration:<br><input  style="width: 100px;" maxlength="4" type="text" value="';
-	echo $etgwtlt_transduration . '" name="etgwtlt_transduration" id="etgwtlt_transduration" /> Only Number / Duration of transition</p>';
-	echo '<p>Plugin URL:<br><input  style="width: 650px;" type="text" value="';
-	echo $etgwtlt_pluginurl . '" name="etgwtlt_pluginurl" id="etgwtlt_pluginurl" /></p>';
-	echo '<p>Image XML Location:<br><input  style="width: 650px;" type="text" value="';
-	echo $etgwtlt_xmllocation . '" name="etgwtlt_xmllocation" id="etgwtlt_xmllocation" /></p>';
-
-	echo '<input name="etgwtlt_submit" id="etgwtlt_submit" class="button-primary" value="Submit" type="submit" />';
 	?>
-	</td>
-	<td width="31%" align="center" valign="middle"></td></tr></table>
-	</form>
-	<br /><strong>Plugin configuration</strong>
+	<div class="wrap">
+	  <div class="form-wrap">
+		<div id="icon-edit" class="icon32 icon32-posts-post"><br>
+		</div>
+		<h2>Excellent transition gallery</h2>
+		<?php
+		$etgwtlt_title = get_option('etgwtlt_title');
+		$etgwtlt_pluginurl = get_option('etgwtlt_pluginurl');
+		$etgwtlt_xmllocation = get_option('etgwtlt_xmllocation');
+		$etgwtlt_pause = get_option('etgwtlt_pause');
+		$etgwtlt_transduration = get_option('etgwtlt_transduration');
+	
+		if (isset($_POST['etgwtlt_form_submit']) && $_POST['etgwtlt_form_submit'] == 'yes')
+		{
+			//	Just security thingy that wordpress offers us
+			check_admin_referer('etgwtlt_form_setting');
+				
+			$etgwtlt_title = stripslashes($_POST['etgwtlt_title']);
+			$etgwtlt_pluginurl = stripslashes($_POST['etgwtlt_pluginurl']);
+			$etgwtlt_xmllocation = stripslashes($_POST['etgwtlt_xmllocation']);
+			$etgwtlt_pause = stripslashes($_POST['etgwtlt_pause']);
+			$etgwtlt_transduration = stripslashes($_POST['etgwtlt_transduration']);
+			
+			
+			update_option('etgwtlt_title', $etgwtlt_title );
+			update_option('etgwtlt_pluginurl', $etgwtlt_pluginurl );
+			update_option('etgwtlt_xmllocation', $etgwtlt_xmllocation );
+			update_option('etgwtlt_pause', $etgwtlt_pause );
+			update_option('etgwtlt_transduration', $etgwtlt_transduration );
+			
+			?>
+			<div class="updated fade">
+				<p><strong>Details successfully updated.</strong></p>
+			</div>
+			<?php
+		}
+		?>
+		<h3>Plugin setting</h3>
+		<form name="etgwtlt_form" method="post" action="#">
+			
+			<label for="tag-title">Title</label>
+			<input name="etgwtlt_title" type="text" value="<?php echo $etgwtlt_title; ?>"  id="etgwtlt_title" size="40" maxlength="100">
+			<p>Please enter your widget title.</p>
+			
+			<label for="tag-title">Pause</label>
+			<input name="etgwtlt_pause" type="text" value="<?php echo $etgwtlt_pause; ?>"  id="etgwtlt_pause" maxlength="4">
+			<p>Please enter pause between content change in millisec. (Example: 2000)</p>
+			
+			<label for="tag-title">Height</label>
+			<input name="etgwtlt_transduration" type="text" value="<?php echo $etgwtlt_transduration; ?>"  id="etgwtlt_transduration" maxlength="4">
+			<p>Please enter duration of transition. (Example: 200)</p>
+			
+			<label for="tag-title">Plugin URL</label>
+			<input name="etgwtlt_pluginurl" type="text" value="<?php echo $etgwtlt_pluginurl; ?>"  id="etgwtlt_pluginurl"  size="100">
+			<p>Please enter you plugin URL.</p>
+			
+			<label for="tag-title">XML file location</label>
+			<input name="etgwtlt_xmllocation" type="text" value="<?php echo $etgwtlt_xmllocation; ?>" id="etgwtlt_xmllocation" size="130">
+			<p>Please enter your XML file location.</p>
+			
+			<div style="height:10px;"></div>
+			<input type="hidden" name="etgwtlt_form_submit" value="yes"/>
+			<input name="etgwtlt_submit" id="etgwtlt_submit" class="button" value="Submit" type="submit" />
+			<a class="button" target="_blank" href="http://www.gopiplus.com/work/2010/07/18/excellent-transition-gallery/">Help</a>
+			<?php wp_nonce_field('etgwtlt_form_setting'); ?>
+		</form>
+		</div>
+	<h3>Plugin configuration option</h3>
 	<ol>
-		<li>Drag and drop the widget</li>
-		<li>Short code for pages and posts</li>
-		<li>Add directly in the theme (Copy and past the below mentioned code to your desired template location)</li>
+		<li>Drag and drop the widget to your sidebar.</li>
+		<li>Add directly in to the theme using PHP code.</li>
+		<li>Add the plugin in the posts or pages using short code.</li>
 	</ol>
-	Check official website for live demo and more information <a target="_blank" href="http://www.gopiplus.com/work/2010/07/18/excellent-transition-gallery/">click here</a><br />
+	<p class="description">Check official website for more information <a target="_blank" href="http://www.gopiplus.com/work/2010/07/18/excellent-transition-gallery/">click here</a></p>
+	</div>
 	<?php
-	echo "</div>";
 }
 
 function etgwtlt_control()
 {
-	echo '<p>Excellent transition gallery.<br> To change the setting goto Excellent transition gallery link on Setting menu.';
-	echo ' <a href="options-general.php?page=excellent-transition-gallery/excellent-transition-gallery.php">';
+	echo '<p>Excellent transition gallery.<br> To change the setting goto <b>Excellent transition gallery</b> link on Setting menu.';
+	echo ' <a href="options-general.php?page=excellent-transition-gallery">';
 	echo 'click here</a></p>';
 }
 
@@ -204,7 +228,7 @@ function etgwtlt_deactivation()
 
 function etgwtlt_add_to_menu() 
 {
-	add_options_page('Excellent transition gallery', 'Excellent transition gallery', 'manage_options', __FILE__, 'etgwtlt_admin_option' );
+	add_options_page('Excellent transition gallery', 'Excellent transition gallery', 'manage_options', 'excellent-transition-gallery', 'etgwtlt_admin_option' );
 }
 
 if (is_admin()) 
