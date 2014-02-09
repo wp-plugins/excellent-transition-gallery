@@ -5,8 +5,8 @@ Author URI: http://www.gopiplus.com/work/2010/07/18/excellent-transition-gallery
 Plugin URI: http://www.gopiplus.com/work/2010/07/18/excellent-transition-gallery/
 Tags: image, slide show, slideshow, gallery, images, widget, translucent, translucent image, imagegallery, sidebar, Transitional
 Requires at least: 3.4
-Tested up to: 3.6
-Stable tag: 8.1
+Tested up to: 3.8
+Stable tag: 8.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 	
@@ -63,12 +63,17 @@ http://www.gopiplus.com/work/2010/07/18/excellent-transition-gallery/
 
 == Screenshots ==
 
-1. Admin setting page. http://www.gopiplus.com/work/2010/07/18/excellent-transition-gallery/
+1. Front page. http://www.gopiplus.com/work/2010/07/18/excellent-transition-gallery/
 
-2. Front end live demo for transition effect. http://www.gopiplus.com/work/2010/07/18/excellent-transition-gallery/
-
+2. Admin page. http://www.gopiplus.com/work/2010/07/18/excellent-transition-gallery/
 
 == Upgrade Notice ==
+
+= 8.2 =	
+
+1. Tested up to 3.8
+2. Now this plugin supports localization (or internationalization). i.e. option to translate into other languages. 
+Plugin *.po file (excellent-transition-gallery.po) available in the languages folder.
 
 = 8.1 =	
 
@@ -117,6 +122,12 @@ Tested upto 3.0.1
 First version
 
 == Changelog ==
+
+= 8.2 =	
+
+1. Tested up to 3.8
+2. Now this plugin supports localization (or internationalization). i.e. option to translate into other languages. 
+Plugin *.po file (excellent-transition-gallery.po) available in the languages folder.
 
 = 8.1 =	
 
