@@ -5,8 +5,8 @@ Author URI: http://www.gopiplus.com/work/2010/07/18/excellent-transition-gallery
 Plugin URI: http://www.gopiplus.com/work/2010/07/18/excellent-transition-gallery/
 Tags: image, slide show, slideshow, gallery, images, widget, translucent, translucent image, imagegallery, sidebar, Transitional
 Requires at least: 3.4
-Tested up to: 3.9
-Stable tag: 8.3
+Tested up to: 4.0
+Stable tag: 8.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 	
@@ -36,13 +36,9 @@ We can configure this plug-in in three different way.
 
 1. Go to widget menu and drag and drop the "Excellent transition gallery" widget to your sidebar location.	
 
-2. Copy and past the mentioned code to your desired template location.		
-
-<code><?php if (function_exists (etgwtlt_show)) etgwtlt_show(); ?></code> 		
+2. Copy and past the mentioned code to your desired template location.  `<?php if (function_exists (etgwtlt_show)) etgwtlt_show(); ?>`		
 
 3. Use the given short code in post or page.		
-
-http://www.gopiplus.com/work/2010/07/18/excellent-transition-gallery/	
 
 == Installation ==
 
@@ -52,14 +48,13 @@ http://www.gopiplus.com/work/2010/07/18/excellent-transition-gallery/
 
 == Frequently Asked Questions ==
 
-**How to arrange the width & height of the slideshow?**  
-**How to change the slide delay time**  
-**Where to upload my image?**  
-**how the slide show manages the order?**  
-**Do you want to change the gallery font style?**  
+* How to arrange the width & height of the slideshow? 
+* How to change the slide delay time?
+* Where to upload my image?
+* how the slide show manages the order?
+* Do you want to change the gallery font style? 
 
 [Answer page](http://www.gopiplus.com/work/2010/07/18/excellent-transition-gallery/)	
-[Contact](http://www.gopiplus.com/work/2010/07/18/excellent-transition-gallery/)	
 
 == Screenshots ==
 
@@ -69,6 +64,10 @@ http://www.gopiplus.com/work/2010/07/18/excellent-transition-gallery/
 
 == Upgrade Notice ==
 
+= 8.4 =	
+
+1. Tested up to 4.0
+
 = 8.3 =	
 
 1. Tested up to 3.9
@@ -100,26 +99,26 @@ Please take your xml file for backup.
 
 = 6.0 =
 
-Tested upto 3.4.1
+Tested up to 3.4.1
 New demo link, www.gopiplus.com
 
 = 5.0 =
 
-Tested upto 3.4
+Tested up to 3.4
 
 = 4.0 =	
 
-Tested upto 3.3
+Tested up to 3.3
 Please take your xml file for backup before update 4.0
 
 = 3.0 =	
 	
-Tested upto 3.1.3
+Tested up to 3.1.3
 Please take your xml file for backup.
 
 = 2.0 =		
 
-Tested upto 3.0.1
+Tested up to 3.0.1
 
 = 1.0 =		
 
@@ -127,6 +126,10 @@ First version
 
 == Changelog ==
 
+= 8.4 =	
+
+1. Tested up to 4.0
+
 = 8.3 =	
 
 1. Tested up to 3.9
@@ -158,26 +161,26 @@ Please take your xml file for backup.
 
 = 6.0 =
 
-Tested upto 3.4.1
+Tested up to 3.4.1
 New demo link, www.gopiplus.com
 
 = 5.0 =
 
-Tested upto 3.4
+Tested up to 3.4
 
 = 4.0 =	
 
-Tested upto 3.3
+Tested up to 3.3
 Please take your xml file for backup before update 4.0
 
 = 3.0 =	
 	
-Tested upto 3.1.3
+Tested up to 3.1.3
 Please take your xml file for backup.
 
 = 2.0 =		
 
-Tested upto 3.0.1
+Tested up to 3.0.1
 
 = 1.0 =		
 
