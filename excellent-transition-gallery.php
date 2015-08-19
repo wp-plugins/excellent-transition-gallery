@@ -4,7 +4,7 @@ Plugin Name: Excellent transition gallery
 Plugin URI: http://www.gopiplus.com/work/2010/07/18/excellent-transition-gallery/
 Description: Don't just display images, showcase them in style using this Excellent transition gallery plugin. Randomly chosen Transitional effects in IE browsers. For other browsers that don't support these built in effects, a custom fade transition is used instead.  
 Author: Gopi Ramasamy
-Version: 8.6
+Version: 8.7
 Author URI: http://www.gopiplus.com/work/2010/07/18/excellent-transition-gallery/
 Donate link: http://www.gopiplus.com/work/2010/07/18/excellent-transition-gallery/
 License: GPLv2 or later
